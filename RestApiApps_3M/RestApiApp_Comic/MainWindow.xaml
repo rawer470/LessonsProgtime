@@ -1,0 +1,30 @@
+﻿<Window x:Class="RestApiApp_Comic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestApiApp_Comic"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800 " Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
+            <Button Name="btnPrev" Width="100" Height="60" Content="PREV" Click="ButtonPrev_Click" Margin="5"/>
+            <Button Name="btnRandom" Width="100" Height="60" Content="Random" Click="ButtonR_Click" Margin="5"/>
+            <Button Name="btnNext" Width="100" Height="60" Content="NEXT" Click="ButtonNext_Click" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" >
+            <Label Content="Искать Комикс: " Margin="10" FontSize="13"/>
+            <TextBox Name="TextBox" />
+            <Button Height="20" Content="Поиск..." Click="Find_Comic"/>
+        </StackPanel>
+        <Label Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" Name="Title_Comic" Content="" Margin="10"/>
+        <Image Grid.Row="1" Margin="15" Name="ImageComic"/>
+        <Label Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" Name="Date_Comic" Content="" Margin="10"/>
+
+
+    </Grid>
+</Window>
